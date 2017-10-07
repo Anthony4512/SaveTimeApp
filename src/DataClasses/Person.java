@@ -10,19 +10,19 @@ abstract class Person
     protected String firstName;
     protected String lastName;
     protected String userName;
-    protected int ID;
+    protected String ID;
     protected Date date;
     protected Date dob;
     protected String email;
     protected String address;
     protected String city;
     protected String state;
-    protected int zipCode;
+    protected String zipCode;
     protected String country;
-    protected int phoneNumber;
+    protected String phoneNumber;
 
-    public Person(String firstName, String lastName, String userName, int ID, Date date, Date dob, String email, String address,
-                  String city, String state, int zipCode, String country, int phoneNumber)
+    public Person(String firstName, String lastName, String userName, String ID, Date date, Date dob, String email, String address,
+                  String city, String state, String zipCode, String country, String phoneNumber)
     {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -69,12 +69,12 @@ abstract class Person
         this.userName = userName;
     }
 
-    public int getID()
+    public String getID()
     {
         return ID;
     }
 
-    public void setID(int ID)
+    public void setID(String ID)
     {
         this.ID = ID;
     }
@@ -139,12 +139,12 @@ abstract class Person
         this.state = state;
     }
 
-    public int getZipCode()
+    public String getZipCode()
     {
         return zipCode;
     }
 
-    public void setZipCode(int zipCode)
+    public void setZipCode(String zipCode)
     {
         this.zipCode = zipCode;
     }
@@ -159,12 +159,12 @@ abstract class Person
         this.country = country;
     }
 
-    public int getPhoneNumber()
+    public String getPhoneNumber()
     {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber)
+    public void setPhoneNumber(String phoneNumber)
     {
         this.phoneNumber = phoneNumber;
     }

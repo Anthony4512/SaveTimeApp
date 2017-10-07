@@ -8,7 +8,7 @@ public class Professional extends Client
     private int businessPhoneNumber;
     private String businessAddress;
 
-    public Professional(String firstName, String lastName, String userName, int ID, Date date, Date dob, String email, String address, String city, String state, int zipCode, String country, int phoneNumber) {
+    public Professional(String firstName, String lastName, String userName, String ID, Date date, Date dob, String email, String address, String city, String state, String zipCode, String country, String phoneNumber) {
         super(firstName, lastName, userName, ID, date, dob, email, address, city, state, zipCode, country, phoneNumber);
     }
 

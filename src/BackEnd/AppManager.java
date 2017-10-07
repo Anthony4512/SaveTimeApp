@@ -7,7 +7,6 @@ import DataClasses.Professional;
 public class AppManager implements AppManagerInterface
 {
 
-
     @Override
     public boolean requestAppointment(Professional professional, Client client, Appointment appointment)
     {

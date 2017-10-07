@@ -3,7 +3,6 @@ package AppMain;
 import DataClasses.Client;
 import DataClasses.Professional;
 import java.util.Date;
-public class Tester
 
 class Tester
 {
@@ -15,9 +14,6 @@ class Tester
         System.out.println("hello world");
       
         System.out.println("Executed with no problems");
-        Client client = new Client("anthony", "mirely", "amirely", 123, new Date(), new Date(),
-                                    "aslflj@gmail.com", "sdfiejr", "asdfsdf", "MA", 11223, "USA",
-                                    9778989);
 
 
         Client c1 = new Client("Jose", "Calderon", "jcalderon", "00",

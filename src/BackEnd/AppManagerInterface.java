@@ -4,8 +4,6 @@ import DataClasses.Appointment;
 import DataClasses.Client;
 import DataClasses.Professional;
 
-import java.sql.Time;
-import java.util.Date;
 
 interface AppManagerInterface
 {

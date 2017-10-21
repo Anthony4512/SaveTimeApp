@@ -21,7 +21,6 @@ class Tester
             e.printStackTrace();
         }
 
-//        Date date2 = new Date("08-11-1986");
 
         System.out.println("hello world");
       

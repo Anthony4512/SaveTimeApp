@@ -15,10 +15,7 @@ public class Appointment
     private int professionalPhoneNum;
     private int clientPhoneNum;
 
-    public Appointment()
-    {
 
-    }
 
     public Appointment(boolean accepted, boolean canceled, String username, Date date, Time timeStart, Time timeStop, int appointmentNum,
              int professionalPhoneNum, int clientPhoneNum)

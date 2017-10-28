@@ -21,10 +21,10 @@ interface DatabaseUtilInterface
 
     Appointment getAppointment(Date appointmentDate, Time appointmentTime);
 
+    boolean deleteAppointment(String appointmentNumber);
+
     Client getClient(String clientID);
 
     List<Client> getClients(Date appointmentDate);
-
-
 
 }

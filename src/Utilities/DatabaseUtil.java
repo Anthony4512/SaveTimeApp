@@ -42,6 +42,12 @@ public class DatabaseUtil implements DatabaseUtilInterface
     }
 
     @Override
+    public boolean deleteAppointment(String appointmentNumber)
+    {
+        return false;
+    }
+
+    @Override
     public Client getClient(String clientID)
     {
         return null;

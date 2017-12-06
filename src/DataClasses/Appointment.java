@@ -5,47 +5,76 @@ import java.util.Date;
 
 public class Appointment
 {
-    private boolean accepted ;
-    private boolean canceled ;
-    private String Username;
+    private boolean accepted;
+    private boolean canceled;
+    private String appointmentName;
+    private Client client;
+    private Professional professional;
     private Date date;
     private Time timeStart;
     private Time timeStop;
     private int appointmentNum;
-    private int professionalPhoneNum;
-    private int clientPhoneNum;
 
 
-
-    public Appointment(boolean accepted, boolean canceled, String username, Date date, Time timeStart, Time timeStop, int appointmentNum,
-             int professionalPhoneNum, int clientPhoneNum)
+    public Appointment(boolean accepted, boolean canceled, String appointmentName, Date date, Time timeStart, Time timeStop, int appointmentNum,
+                       int professionalPhoneNum, int clientPhoneNum)
     {
         this.accepted = accepted;
         this.canceled = canceled;
-        Username = username;
+        this.appointmentName = appointmentName;
         this.date = date;
         this.timeStart = timeStart;
         this.timeStop = timeStop;
         this.appointmentNum = appointmentNum;
-        this.professionalPhoneNum = professionalPhoneNum;
-        this.clientPhoneNum = clientPhoneNum;
+
+    }
+
+    public Appointment(Date appDate)
+    {
+        accepted = false;
+        canceled = false;
+        setAppointmentName("Fake appointment");
+//        this.timeStart.setTime(appDate.getTime());
+        date = appDate;
+        appointmentNum = -1;
+
     }
 
     @Override
 
     public String toString()
     {
-        return "appointment{" +
+        String appString = (!this.isCanceled() ? "appointment{" +
                 "accepted=" + accepted +
                 ", canceled=" + canceled +
-                ", Username='" + Username + '\'' +
-                ", date=" + date +
+                ", appointmentName='" + appointmentName + '\'' +
+                ", date=" + date.toString() +
                 ", timeStart=" + timeStart +
-                ", timeStop=" + timeStop +
+//                ", timeStop=" + timeStop +
                 ", appointmentNum=" + appointmentNum +
-                ", professionalPhoneNum=" + professionalPhoneNum +
-                ", clientPhoneNum=" + clientPhoneNum +
-                '}';
+                '}' : "Appointment has been canceled or deleted");
+
+        return appString;
+    }
+
+    public Client getClient()
+    {
+        return client;
+    }
+
+    public void setClient(Client client)
+    {
+        this.client = client;
+    }
+
+    public Professional getProfessional()
+    {
+        return professional;
+    }
+
+    public void setProfessional(Professional professional)
+    {
+        this.professional = professional;
     }
 
     public boolean isAccepted()
@@ -58,7 +87,8 @@ public class Appointment
         this.accepted = accepted;
     }
 
-    public boolean isCanceled() {
+    public boolean isCanceled()
+    {
         return canceled;
     }
 
@@ -67,14 +97,14 @@ public class Appointment
         this.canceled = canceled;
     }
 
-    public String getUsername()
+    public String getAppointmentName()
     {
-        return Username;
+        return appointmentName;
     }
 
-    public void setUsername(String username)
+    public void setAppointmentName(String appointmentName)
     {
-        Username = username;
+        this.appointmentName = appointmentName;
     }
 
     public Date getDate()
@@ -117,23 +147,4 @@ public class Appointment
         this.appointmentNum = appointmentNum;
     }
 
-    public int getProfessionalPhoneNum()
-    {
-        return professionalPhoneNum;
-    }
-
-    public void setProfessionalPhoneNum(int professionalPhoneNum)
-    {
-        this.professionalPhoneNum = professionalPhoneNum;
-    }
-
-    public int getClientPhoneNum()
-    {
-        return clientPhoneNum;
-    }
-
-    public void setClientPhoneNum(int clientPhoneNum)
-    {
-        this.clientPhoneNum = clientPhoneNum;
-    }
 }

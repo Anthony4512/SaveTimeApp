@@ -9,23 +9,23 @@ interface AppManagerInterface
 {
     /**
      * sends a request to the professional to create an appointment
-     * @param professional that is going to accept or deny the appointment
-     * @param client that is requesting appointment
-     * @param timeOfAppointment the time requested by the client
-     * @param dateOfAppointment the date requested by the client
+//     * @param professional that is going to accept or deny the appointment
+//     * @param client that is requesting appointment
+//     * @param timeOfAppointment the time requested by the client --> deleted
+//     * @param dateOfAppointment the date requested by the client --> deleted
      * @return true if created, false otherwise
      */
-    boolean requestAppointment(Professional professional, Client client, Appointment appointment);
+    Appointment requestAppointment(Professional professional, Client client);
 
 
     /**
      * Deletes the appointment and notify users of the change
-     * @param professional to be notified, can also delete the appointment
-     * @param client to be notified
-     * @param appointment to be deleted
+//     * @param professional to be notified, can also delete the appointment
+//     * @param client to be notified
+//     * @param appointment to be deleted
      * @return true if deleted, false otherwise
      */
-    boolean deleteAppointment(Professional professional, Client client, Appointment appointment);
+    boolean deleteAppointment(Appointment appointment);
 
 
     /**
@@ -42,7 +42,7 @@ interface AppManagerInterface
      * @param appointment to be denied
      * @return true if denied, false otherwise
      */
-    boolean denyAppointment(Appointment appointment);
+//    boolean denyAppointment(Appointment appointment);
 
 
     /**
@@ -50,7 +50,7 @@ interface AppManagerInterface
      * @param appointment to be updated
      * @return true if updated,  false otherwise
      */
-    boolean updateAppointment(Appointment appointment);
+    Appointment updateAppointment(Appointment appointment);
 
 
 

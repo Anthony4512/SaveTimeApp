@@ -1,0 +1,10 @@
+
+
+.button {
+    -fx-background-color: aqua;
+}
+
+.root {
+    -fx-background-color: azure;
+    -fx-border-color: cyan;
+}
